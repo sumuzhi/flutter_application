@@ -18,7 +18,6 @@ class LoginDao {
       body: jsonEncode(body),
     );
     if (res.statusCode == 200) {
-      print(res.headers['authorization']);
       await prefs.setString(
         'authorization',
         res.headers['authorization'] ?? '',
